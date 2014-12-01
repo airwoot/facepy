@@ -341,7 +341,7 @@ class GraphAPI(object):
         if type(data) == type(bytes()):
             data = data.decode('utf-8')
         try:
-            data = json.loads(data, parse_float=Decimal)
+            data = json.loads(data)
         except ValueError:
             return data
 

@@ -158,7 +158,7 @@ def test_get_with_fpnum():
 
     resp = graph.get('<paymend_id>')
 
-    assert_equal(resp, {'payout': decimal.Decimal('0.94')})
+    assert_equal(resp, {'payout': float('0.94')})
 
 
 @with_setup(mock, unmock)
